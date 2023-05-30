@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrasshopperItems", "GrasshopperItems.csproj", "{86BE1952-8785-4BED-B6D1-F5D114A44347}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86BE1952-8785-4BED-B6D1-F5D114A44347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86BE1952-8785-4BED-B6D1-F5D114A44347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86BE1952-8785-4BED-B6D1-F5D114A44347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86BE1952-8785-4BED-B6D1-F5D114A44347}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A74F2ED3-F0B3-4A76-A7CE-A87AFBEBC6D5}
+	EndGlobalSection
+EndGlobal
