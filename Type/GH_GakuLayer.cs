@@ -44,18 +44,5 @@ namespace GrasshopperItems.Type
             set => this.m_value = value;
         }
         #endregion
-        #region casting
-        public override bool CastFrom(object source)
-        {
-            if (source is GH_Guid)
-            {
-                GH_Guid guid = (GH_Guid)source;
-                this.ReferenceID = guid.Value;
-                return true;
-            }
-            else
-                return false;
-        }
-        #endregion
     }
 }

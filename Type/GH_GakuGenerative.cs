@@ -9,10 +9,6 @@ namespace GrasshopperItems.Type
         public override bool IsValid => throw new NotImplementedException();
         public virtual Guid ReferenceID { get; set; }
         public override string TypeDescription => throw new NotImplementedException();
-        public override IGH_Goo Duplicate()
-        {
-            throw new System.NotImplementedException();
-        }
         public override string ToString()
         {
             if (this.Value == null)
@@ -22,5 +18,18 @@ namespace GrasshopperItems.Type
             else
                 return this.TypeName;
         }
+        #region casting
+        public override bool CastFrom(object source)
+        {
+            if (source is GH_Guid)
+            {
+                GH_Guid guid = (GH_Guid)source;
+                this.ReferenceID = guid.Value;
+                return true;
+            }
+            else
+                return false;
+        }
+        #endregion
     }
 }
