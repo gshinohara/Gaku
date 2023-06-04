@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Eto.Forms;
 using Rhino;
 using Rhino.UI;
 using Grasshopper.Kernel;
@@ -15,15 +16,18 @@ namespace GrasshopperItems.Param
         protected override GH_GetterResult Prompt_Singular(ref GH_GakuLayer value)
         {
             LayerSelector dialog = new LayerSelector(RhinoDoc.ActiveDoc.Layers);
-            dialog.AddDropDown();
+            dialog.SetDropDown();
             bool rc = dialog.ShowModal(RhinoEtoApp.MainWindow);
             if (rc)
             {
-                value = new GH_GakuLayer(dialog.GetLayerGuid());
+                value = new GH_GakuLayer(dialog.GetSelectedGuid());
                 return GH_GetterResult.success;
             }
             else
+            {
+                value = new GH_GakuLayer();
                 return GH_GetterResult.cancel;
+            }
         }
         protected override GH_GetterResult Prompt_Plural(ref List<GH_GakuLayer> values)
         {
