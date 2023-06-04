@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using Eto.Forms;
 using Eto.Drawing;
+using Rhino.Display;
 using Rhino.DocObjects;
 using Rhino.DocObjects.Tables;
 
 namespace GrasshopperItems.Eto
 {
-    internal class GeneralSelector<TComponent> : Dialog<bool>
-        where TComponent : ModelComponent
+    internal class GeneralSelector<T> : Dialog<bool>
+        where T : class
     {
         private readonly DropDown DropDown = new DropDown();
-        private RhinoDocCommonTable<TComponent> Table { get; }
-        public GeneralSelector(RhinoDocCommonTable<TComponent> table)
+        private IEnumerable<T> Table { get; }
+        public GeneralSelector(IEnumerable<T> table)
         {
-            this.Title = typeof(TComponent).Name;
+            this.Title = typeof(T).Name;
             this.Padding = 10;
             this.Resizable = true;
             this.Content = new DynamicLayout
@@ -29,7 +30,7 @@ namespace GrasshopperItems.Eto
 
             this.Table = table;
         }
-        protected virtual string GetTextString(TComponent component)
+        protected virtual string GetTextString(T component)
         {
             return component.ToString();
         }
@@ -44,12 +45,23 @@ namespace GrasshopperItems.Eto
         #region 外部アクセス
         public Guid GetSelectedGuid()
         {
-            ModelComponent component = (this.DropDown.SelectedValue as ListItem).Tag as ModelComponent;
-            return component.Id;
+            T selected = (this.DropDown.SelectedValue as ListItem).Tag as T;
+            if (selected is ModelComponent)
+            {
+                ModelComponent modelComponent = selected as ModelComponent;
+                return modelComponent.Id;
+            }
+            else if (selected is RhinoView)
+            {
+                RhinoView view = selected as RhinoView;
+                return view.ActiveViewportID;
+            }
+            else
+                return Guid.Empty;
         }
         public void SetDropDown()
         {
-            IEnumerator<TComponent> enumerator = this.Table.GetEnumerator();
+            IEnumerator<T> enumerator = this.Table.GetEnumerator();
             while (enumerator.MoveNext())
             {
                 ListItem item = new ListItem

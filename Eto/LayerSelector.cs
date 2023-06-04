@@ -1,7 +1,4 @@
-﻿using System;
-using Eto.Forms;
-using Eto.Drawing;
-using Rhino.DocObjects;
+﻿using Rhino.DocObjects;
 using Rhino.DocObjects.Tables;
 
 namespace GrasshopperItems.Eto
