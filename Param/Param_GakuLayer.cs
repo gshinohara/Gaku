@@ -9,9 +9,10 @@ using GrasshopperItems.Eto;
 
 namespace GrasshopperItems.Param
 {
-    public class Param_GakuLayer : GH_PersistentParam<GH_GakuLayer>
+    public class Param_GakuLayer : GH_GakuParam<GH_GakuLayer>
     {
-        public Param_GakuLayer() : base("Layer", "Layer", "", Setting.Category, Setting.SubCat_Param) { }
+        public Param_GakuLayer()
+            : base(new GH_InstanceDescription("Layer", "Layer", "", Setting.Category, Setting.SubCat_Param)) { }
         public override Guid ComponentGuid => new Guid("28237E4B-382F-4EC9-A925-3A63E5C80E1A");
         protected override GH_GetterResult Prompt_Singular(ref GH_GakuLayer value)
         {
