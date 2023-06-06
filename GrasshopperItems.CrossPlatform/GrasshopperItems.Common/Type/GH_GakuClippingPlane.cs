@@ -12,48 +12,48 @@ namespace GrasshopperItems.Type
         public GH_GakuClippingPlane() { }
         public GH_GakuClippingPlane(ClippingPlaneSurface clippingPlaneSurface)
         {
-            this.Value = clippingPlaneSurface;
+            Value = clippingPlaneSurface;
         }
         public GH_GakuClippingPlane(Guid id)
         {
-            this.ReferenceID = id;
+            ReferenceID = id;
         }
 
         #region GH_Gooの継承
-        public override BoundingBox Boundingbox => this.Value.GetBoundingBox(true);
+        public override BoundingBox Boundingbox => Value.GetBoundingBox(true);
         public override string TypeName => "ClipPlane";
         public override IGH_GeometricGoo DuplicateGeometry()
         {
-            return new GH_GakuClippingPlane(this.Value);
+            return new GH_GakuClippingPlane(Value);
         }
         public override BoundingBox GetBoundingBox(Transform xform)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         public override IGH_GeometricGoo Morph(SpaceMorph xmorph)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         public override ClippingPlaneSurface Value
         {
             get
             {
-                if (this.IsReferencedGeometry)
+                if (IsReferencedGeometry)
                 {
-                    RhinoObject rhobj = RhinoDoc.ActiveDoc.Objects.FindId(this.ReferenceID);
+                    RhinoObject rhobj = RhinoDoc.ActiveDoc.Objects.FindId(ReferenceID);
                     return (rhobj as ClippingPlaneObject).ClippingPlaneGeometry;
                 }
                 else
-                    return this.m_value;
+                    return m_value;
             }
-            set => this.m_value = value;
+            set => m_value = value;
         }
         #endregion
 
         #region IGH_PreviewData
         public override void DrawViewportWires(GH_PreviewWireArgs args)
         {
-            PlaneSurface planeSrf = (this.Value as ClippingPlaneSurface) as PlaneSurface;
+            PlaneSurface planeSrf = Value as ClippingPlaneSurface as PlaneSurface;
             GH_Surface gh_srf = new GH_Surface(planeSrf);
             GH_Rectangle gh_rect = new GH_Rectangle();
             gh_rect.CastFrom(gh_srf);
@@ -71,7 +71,7 @@ namespace GrasshopperItems.Type
         }
         public override void DrawViewportMeshes(GH_PreviewMeshArgs args)
         {
-            PlaneSurface planeSrf = (this.Value as ClippingPlaneSurface) as PlaneSurface;
+            PlaneSurface planeSrf = Value as ClippingPlaneSurface as PlaneSurface;
             GH_Surface gh_srf = new GH_Surface(planeSrf);
             gh_srf.DrawViewportMeshes(args);
         }
@@ -80,14 +80,14 @@ namespace GrasshopperItems.Type
         #region IGH_BakeAwareData
         public override bool BakeGeometry(RhinoDoc doc, ObjectAttributes att, out Guid obj_guid)
         {
-            if (doc == null || att == null || !(this.Value is GeometryBase))
+            if (doc == null || att == null || !(Value is GeometryBase))
             {
                 obj_guid = Guid.Empty;
                 return false;
             }
             else
             {
-                obj_guid = doc.Objects.AddClippingPlane(this.Value.Plane, this.Value.Domain(0).Length, this.Value.Domain(1).Length, this.Value.ViewportIds(), att);
+                obj_guid = doc.Objects.AddClippingPlane(Value.Plane, Value.Domain(0).Length, Value.Domain(1).Length, Value.ViewportIds(), att);
                 return true;
             }
         }

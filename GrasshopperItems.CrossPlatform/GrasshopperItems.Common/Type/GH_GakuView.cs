@@ -10,39 +10,39 @@ namespace GrasshopperItems.Type
         public GH_GakuView() { }
         public GH_GakuView(RhinoView layer)
         {
-            this.Value = layer;
+            Value = layer;
         }
         public GH_GakuView(GH_GakuView other)
         {
             if (other == null)
                 throw new ArgumentNullException("other");
             else
-                this.Value = other.Value;
+                Value = other.Value;
         }
         public GH_GakuView(Guid guid)
         {
-            this.ReferenceID = guid;
+            ReferenceID = guid;
         }
 
         #region GH_Gooの継承
         public override string TypeName => "View";
         public override IGH_Goo Duplicate()
         {
-            if (this.IsReferenced)
+            if (IsReferenced)
                 return new GH_GakuView(ReferenceID);
             else
-                return new GH_GakuView(this.Value);
+                return new GH_GakuView(Value);
         }
         public override RhinoView Value
         {
             get
             {
-                if (this.IsReferenced)
+                if (IsReferenced)
                     return RhinoDoc.ActiveDoc.Views.Find(ReferenceID);
                 else
-                    return this.m_value;
+                    return m_value;
             }
-            set => this.m_value = value;
+            set => m_value = value;
         }
         #endregion
     }

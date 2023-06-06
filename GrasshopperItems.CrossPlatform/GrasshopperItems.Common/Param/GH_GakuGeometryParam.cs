@@ -16,14 +16,14 @@ namespace GrasshopperItems.Param
         #region IGH_PreviewObject
         public bool Hidden { get; set; }
         public bool IsPreviewCapable => true;
-        public BoundingBox ClippingBox => base.Preview_ComputeClippingBox();
+        public BoundingBox ClippingBox => Preview_ComputeClippingBox();
         public void DrawViewportMeshes(IGH_PreviewArgs args)
         {
-            base.Preview_DrawMeshes(args);
+            Preview_DrawMeshes(args);
         }
         public void DrawViewportWires(IGH_PreviewArgs args)
         {
-            base.Preview_DrawWires(args);
+            Preview_DrawWires(args);
         }
         #endregion
 
@@ -33,7 +33,7 @@ namespace GrasshopperItems.Param
         {
             if (att == null)
                 att = doc.CreateDefaultAttributes();
-            foreach (IGH_BakeAwareData value in this.m_data)
+            foreach (IGH_BakeAwareData value in m_data)
             {
                 value.BakeGeometry(doc, att, out Guid id);
                 obj_ids.Add(id);
@@ -41,7 +41,7 @@ namespace GrasshopperItems.Param
         }
         public void BakeGeometry(RhinoDoc doc, List<Guid> obj_ids)
         {
-            this.BakeGeometry(doc, null, obj_ids);
+            BakeGeometry(doc, null, obj_ids);
         }
         #endregion
     }

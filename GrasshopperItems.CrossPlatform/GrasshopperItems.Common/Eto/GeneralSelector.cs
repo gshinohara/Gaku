@@ -16,19 +16,19 @@ namespace GrasshopperItems.Eto
         private IEnumerable<T> Table { get; }
         public GeneralSelector(IEnumerable<T> table)
         {
-            this.Title = typeof(T).Name;
-            this.Padding = 10;
-            this.Resizable = true;
-            this.Content = new DynamicLayout
+            Title = typeof(T).Name;
+            Padding = 10;
+            Resizable = true;
+            Content = new DynamicLayout
             {
                 Spacing = new Size(5, 5),
             };
-            this.DefaultButton = new Button { Text = "OK" };
-            this.DefaultButton.Click += this.OnOKClick;
-            this.AbortButton = new Button { Text = "Cancel" };
-            this.AbortButton.Click += this.OnCancelClick;
+            DefaultButton = new Button { Text = "OK" };
+            DefaultButton.Click += OnOKClick;
+            AbortButton = new Button { Text = "Cancel" };
+            AbortButton.Click += OnCancelClick;
 
-            this.Table = table;
+            Table = table;
         }
         protected virtual string GetTextString(T component)
         {
@@ -36,16 +36,16 @@ namespace GrasshopperItems.Eto
         }
         private void SetLayout(Control control)
         {
-            var buttonCells = new List<Button> { this.DefaultButton, this.AbortButton }.Select((Button b) => new TableCell(b, true));
-            (this.Content as DynamicLayout).AddRow(control);
-            (this.Content as DynamicLayout).AddRow(null);
-            (this.Content as DynamicLayout).AddRow(new TableLayout(new TableRow(buttonCells)));
+            var buttonCells = new List<Button> { DefaultButton, AbortButton }.Select((b) => new TableCell(b, true));
+            (Content as DynamicLayout).AddRow(control);
+            (Content as DynamicLayout).AddRow(null);
+            (Content as DynamicLayout).AddRow(new TableLayout(new TableRow(buttonCells)));
         }
 
         #region 外部アクセス
         public Guid GetSelectedGuid()
         {
-            T selected = (this.DropDown.SelectedValue as ListItem).Tag as T;
+            T selected = (DropDown.SelectedValue as ListItem).Tag as T;
             if (selected is ModelComponent)
             {
                 ModelComponent modelComponent = selected as ModelComponent;
@@ -61,29 +61,29 @@ namespace GrasshopperItems.Eto
         }
         public void SetDropDown()
         {
-            IEnumerator<T> enumerator = this.Table.GetEnumerator();
+            IEnumerator<T> enumerator = Table.GetEnumerator();
             while (enumerator.MoveNext())
             {
                 ListItem item = new ListItem
                 {
-                    Text = this.GetTextString(enumerator.Current),
+                    Text = GetTextString(enumerator.Current),
                     Tag = enumerator.Current,
                 };
-                this.DropDown.Items.Add(item);
+                DropDown.Items.Add(item);
             }
 
-            this.SetLayout(this.DropDown);
+            SetLayout(DropDown);
         }
         #endregion
 
         #region Event
         private void OnOKClick(object sender, EventArgs e)
         {
-            this.Close(true);
+            Close(true);
         }
         private void OnCancelClick(object sender, EventArgs e)
         {
-            this.Close(false);
+            Close(false);
         }
         #endregion
     }

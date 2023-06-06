@@ -11,19 +11,19 @@ namespace GrasshopperItems.Type
     public abstract class GH_GakuGeometric<T> : GH_GeometricGoo<T>, IGH_GakuType, IGH_PreviewData, IGH_BakeAwareData
     {
         #region GH_GeometricGoo
-        public bool IsReferenced => this.ReferenceID != Guid.Empty;
-        public override bool IsReferencedGeometry => this.IsReferenced;
+        public bool IsReferenced => ReferenceID != Guid.Empty;
+        public override bool IsReferencedGeometry => IsReferenced;
         public override Guid ReferenceID { get; set; }
         public abstract override T Value { get; set; }
         public override string TypeDescription => throw new NotImplementedException();
         public override string ToString()
         {
-            if (this.Value == null)
-                return $"Invalid {this.TypeName}";
-            else if (this.IsReferenced)
-                return $"Referenced {this.TypeName}";
+            if (Value == null)
+                return $"Invalid {TypeName}";
+            else if (IsReferenced)
+                return $"Referenced {TypeName}";
             else
-                return this.TypeName;
+                return TypeName;
         }
         public override IGH_GeometricGoo Transform(Transform xform)
         {
@@ -31,7 +31,7 @@ namespace GrasshopperItems.Type
                 return null;
             else
             {
-                GH_GakuGeometric<T> duplicated = this.DuplicateGeometry() as GH_GakuGeometric<T>;
+                GH_GakuGeometric<T> duplicated = DuplicateGeometry() as GH_GakuGeometric<T>;
                 (duplicated.Value as GeometryBase).Transform(xform);
                 return duplicated;
             }
@@ -39,7 +39,7 @@ namespace GrasshopperItems.Type
         #endregion
 
         #region IGH_PreviewData
-        public BoundingBox ClippingBox => this.Boundingbox;
+        public BoundingBox ClippingBox => Boundingbox;
         public abstract void DrawViewportWires(GH_PreviewWireArgs args);
         public abstract void DrawViewportMeshes(GH_PreviewMeshArgs args);
         #endregion
@@ -47,14 +47,14 @@ namespace GrasshopperItems.Type
         #region IGH_BakeAwareData
         public virtual bool BakeGeometry(RhinoDoc doc, ObjectAttributes att, out Guid obj_guid)
         {
-            if (doc == null || att == null || !(this.Value is GeometryBase))
+            if (doc == null || att == null || !(Value is GeometryBase))
             {
                 obj_guid = Guid.Empty;
                 return false;
             }
             else
             {
-                obj_guid = doc.Objects.Add(this.Value as GeometryBase, att);
+                obj_guid = doc.Objects.Add(Value as GeometryBase, att);
                 return true;
             }
         }
@@ -66,7 +66,7 @@ namespace GrasshopperItems.Type
             if (source is GH_Guid)
             {
                 GH_Guid guid = (GH_Guid)source;
-                this.ReferenceID = guid.Value;
+                ReferenceID = guid.Value;
                 return true;
             }
             else
