@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GrasshopperItems.Component.DeconstructLayer" Collapsed="true">
+    <Position X="27.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIABAAAAAAAAAAAAAAAAAEAABAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Component\DeconstructLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Eto.GeneralSelector&lt;T&gt;" Collapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAQAAACACAAAAIAgAAAAAAhAA=</HashCode>
+      <FileName>Eto\GeneralSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Eto.LayerSelector" Collapsed="true">
+    <Position X="22.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Eto\LayerSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Eto.ViewSelector" Collapsed="true">
+    <Position X="25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Eto\ViewSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.GH_GakuGeometryParam&lt;T&gt;" Collapsed="true">
+    <Position X="17.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAQAAADAAAAAACAAAAAAAAAAECAA=</HashCode>
+      <FileName>Param\GH_GakuGeometryParam.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GrasshopperItems.Param.GH_GakuParam&lt;T&gt;" Collapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\GH_GakuParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuAttributes" Collapsed="true">
+    <Position X="15" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuClippingPlane" Collapsed="true">
+    <Position X="17.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuClippingPlane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuLayer" Collapsed="true">
+    <Position X="19.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuRhinoObject" Collapsed="true">
+    <Position X="19.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuRhinoObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuText" Collapsed="true">
+    <Position X="15" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Param.Param_GakuView" Collapsed="true">
+    <Position X="17.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Param\Param_GakuView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuAttributes" Collapsed="true">
+    <Position X="29.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAEAAgAAAAAAAAAIBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Type\GH_GakuAttributes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuClippingPlane" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAADAgACAAABBAAAAgAAAACAA=</HashCode>
+      <FileName>Type\GH_GakuClippingPlane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuGenerative&lt;T&gt;" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAAAAAAAAEAAkAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Type\GH_GakuGenerative.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuGeometric&lt;T&gt;" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAAAAAAAAEAAEAADQACAAACAAAAAAgAAAACAE=</HashCode>
+      <FileName>Type\GH_GakuGeometric.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuLayer" Collapsed="true">
+    <Position X="22.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAgAAAAAAA=</HashCode>
+      <FileName>Type\GH_GakuLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuRhinoObject" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAABAgACAAABBAAAAgAAAACAA=</HashCode>
+      <FileName>Type\GH_GakuRhinoObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuText" Collapsed="true">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAADAgACAAABBAAAAgAAAACAA=</HashCode>
+      <FileName>Type\GH_GakuText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Type.GH_GakuView" Collapsed="true">
+    <Position X="25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAgAAAAAAA=</HashCode>
+      <FileName>Type\GH_GakuView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.GrasshopperItemsCommonInfo" Collapsed="true">
+    <Position X="27.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAACAAAEAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GrasshopperItemsCommonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrasshopperItems.Setting" Collapsed="true">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>Setting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GrasshopperItems.Type.IGH_GakuType" Collapsed="true">
+    <Position X="27.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Type\IGH_GakuType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>
