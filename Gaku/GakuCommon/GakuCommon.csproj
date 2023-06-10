@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RhinoCommon" Version="7.29.23107.3001" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DocObject\" />
+    <Folder Include="Geometry\" />
+  </ItemGroup>
+
+</Project>
