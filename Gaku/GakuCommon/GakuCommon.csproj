@@ -1,18 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net48</TargetFramework>
+    <Version>1.0</Version>
+    <Title>GakuCommon</Title>
+    <Description>Description of GakuCommon</Description>
+    <TargetExt>.rhp</TargetExt>
   </PropertyGroup>
-
+  
   <ItemGroup>
-    <PackageReference Include="RhinoCommon" Version="7.29.23107.3001" />
+    <PackageReference Include="RhinoCommon" Version="7.13.21348.13001" IncludeAssets="compile;build" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <Folder Include="DocObject\" />
     <Folder Include="Geometry\" />
   </ItemGroup>
-
+  
+  <PropertyGroup Condition="$(Configuration) == 'Debug' AND $([MSBuild]::IsOSPlatform(Windows))">
+    <StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+    <StartArguments></StartArguments>
+    <StartAction>Program</StartAction>
+  </PropertyGroup>
+  
 </Project>

@@ -6,6 +6,7 @@
     <Title>RhinoItems.Common</Title>
     <Description>Description of RhinoItems.Common</Description>
     <TargetExt>.rhp</TargetExt>
+    <RootNamespace>RhinoItems</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,5 +33,9 @@
   
   <ItemGroup>
     <None Remove="Object\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
   </ItemGroup>
 </Project>
