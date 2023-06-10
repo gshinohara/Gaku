@@ -6,8 +6,16 @@
     <Title>RhinoItems.Common</Title>
     <Description>Description of RhinoItems.Common</Description>
     <TargetExt>.rhp</TargetExt>
+    <RootNamespace>RhinoItems</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>DEBUG;ON_RUNTIME_APPLE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>ON_RUNTIME_APPLE</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\**\*" />
   </ItemGroup>
