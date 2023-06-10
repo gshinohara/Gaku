@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrasshopperItems.Common.Mac", "GrasshopperItems.Common\GrasshopperItems.Common.Mac.csproj", "{F514358D-9D6B-4E29-B1BE-347A74FCECAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoItems.Common", "RhinoItems.Common\RhinoItems.Common.csproj", "{E41CD4E4-BC78-40C3-8AFC-123C673C71C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoItems.Common.Mac", "RhinoItems.Common\RhinoItems.Common.Mac.csproj", "{E41CD4E4-BC78-40C3-8AFC-123C673C71C0}"
 EndProject
 Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "GrasshopperItems.Common.Windows", "GrasshopperItems.Common\GrasshopperItems.Common.Windows.csproj", "{251D9DEF-2276-4C3E-8202-21539ADACC63}"
 EndProject
