@@ -6,10 +6,10 @@ using GrasshopperItems.Type;
 
 namespace GrasshopperItems.Component
 {
-    public class DeconstructLayer : GH_Component
+    public class Layer_DeconstructLayer : GH_Component
     {
-        public DeconstructLayer()
-          : base("DeconstructLayer", "DLayer",
+        public Layer_DeconstructLayer()
+          : base("Deconstruct Layer", "DeconL",
               "",
               Setting.Category, Setting.SubCat_Layer)
         {
