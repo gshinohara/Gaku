@@ -33,5 +33,9 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
+  </ItemGroup>
 
 </Project>

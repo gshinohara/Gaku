@@ -30,4 +30,7 @@
   <ItemGroup>
     <Folder Include="Object\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
+  </ItemGroup>
 </Project>

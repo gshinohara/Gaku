@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrasshopperItems.Common.Win
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RhinoItems.Common.Windows", "RhinoItems.Common\RhinoItems.Common.Windows.csproj", "{3FDFEBC3-9EF4-4C24-9B17-B336995DCD93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GakuCommon", "GakuCommon\GakuCommon.csproj", "{2F44DB69-F4F1-4E92-8669-4543DC5197BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GakuCommon", "GakuCommon\GakuCommon.csproj", "{A53C8286-02A4-49AB-8364-A7572E1D7FD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{3FDFEBC3-9EF4-4C24-9B17-B336995DCD93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FDFEBC3-9EF4-4C24-9B17-B336995DCD93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FDFEBC3-9EF4-4C24-9B17-B336995DCD93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F44DB69-F4F1-4E92-8669-4543DC5197BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F44DB69-F4F1-4E92-8669-4543DC5197BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F44DB69-F4F1-4E92-8669-4543DC5197BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F44DB69-F4F1-4E92-8669-4543DC5197BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53C8286-02A4-49AB-8364-A7572E1D7FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53C8286-02A4-49AB-8364-A7572E1D7FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53C8286-02A4-49AB-8364-A7572E1D7FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53C8286-02A4-49AB-8364-A7572E1D7FD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

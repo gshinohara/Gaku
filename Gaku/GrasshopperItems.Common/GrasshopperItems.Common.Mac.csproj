@@ -20,4 +20,7 @@
     <PackageReference Include="Grasshopper" Version="7.13.21348.13001" IncludeAssets="compile;build" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
+  </ItemGroup>
 </Project>
