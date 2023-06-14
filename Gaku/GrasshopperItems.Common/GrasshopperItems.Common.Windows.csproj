@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Version>1.0</Version>
+    <Title>GrasshopperItems.Common</Title>
+    <Description>Description of GrasshopperItems.Common</Description>
+    <TargetExt>.gha</TargetExt>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RootNamespace>GrasshopperItems</RootNamespace>
+    <AssemblyName>GrasshopperItems</AssemblyName>
+  </PropertyGroup>
+	
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>ON_RUNTIME_WIN</DefineConstants>
+  </PropertyGroup>
+	
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>ON_RUNTIME_WIN</DefineConstants>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="$(Configuration) == 'Debug' AND $([MSBuild]::IsOSPlatform(Windows))">
+		<StartProgram>C:\Program Files\Rhino 7\System\Rhino.exe</StartProgram>
+		<StartArguments></StartArguments>
+		<StartAction>Program</StartAction>
+	</PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Eto.Forms" Version="2.6.0" />
+    <PackageReference Include="Grasshopper" Version="7.13.21348.13001" IncludeAssets="compile;build" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
+  </ItemGroup>
+
+</Project>

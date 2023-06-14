@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Version>1.0</Version>
+    <Title>RhinoItems.Common</Title>
+    <Description>Description of RhinoItems.Common</Description>
+    <TargetExt>.rhp</TargetExt>
+    <RootNamespace>RhinoItems</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>ON_RUNTIME_WIN</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>ON_RUNTIME_WIN</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Object\**" />
+    <EmbeddedResource Remove="Object\**" />
+    <None Remove="Object\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="RhinoCommon" Version="7.13.21348.13001" IncludeAssets="compile;build" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Object\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\GakuCommon\GakuCommon.csproj" />
+  </ItemGroup>
+</Project>
